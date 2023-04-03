@@ -1,0 +1,268 @@
+﻿namespace WindowsFormsApp1_BEATRIXS
+{
+    partial class VPDestinatario
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.pnlaAzul = new System.Windows.Forms.Panel();
+            this.lblDatos = new System.Windows.Forms.Label();
+            this.pnlAzulFondo = new System.Windows.Forms.Panel();
+            this.pnlAzulFondo2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtbEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtbxTelefono = new System.Windows.Forms.TextBox();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.txtbxCodigo = new System.Windows.Forms.TextBox();
+            this.lblCodigoPostal = new System.Windows.Forms.Label();
+            this.txtbxDireccion = new System.Windows.Forms.TextBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.txtbxDestinatario = new System.Windows.Forms.TextBox();
+            this.lblDestinatario = new System.Windows.Forms.Label();
+            this.pnlAzulFondo.SuspendLayout();
+            this.pnlAzulFondo2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnlaAzul
+            // 
+            this.pnlaAzul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
+            this.pnlaAzul.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlaAzul.Location = new System.Drawing.Point(0, 0);
+            this.pnlaAzul.Name = "pnlaAzul";
+            this.pnlaAzul.Size = new System.Drawing.Size(219, 481);
+            this.pnlaAzul.TabIndex = 0;
+            // 
+            // lblDatos
+            // 
+            this.lblDatos.AutoSize = true;
+            this.lblDatos.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatos.Location = new System.Drawing.Point(361, 20);
+            this.lblDatos.Name = "lblDatos";
+            this.lblDatos.Size = new System.Drawing.Size(306, 34);
+            this.lblDatos.TabIndex = 1;
+            this.lblDatos.Text = "Datos del Destinatario";
+            // 
+            // pnlAzulFondo
+            // 
+            this.pnlAzulFondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.pnlAzulFondo.Controls.Add(this.pnlAzulFondo2);
+            this.pnlAzulFondo.Location = new System.Drawing.Point(240, 64);
+            this.pnlAzulFondo.Name = "pnlAzulFondo";
+            this.pnlAzulFondo.Size = new System.Drawing.Size(538, 382);
+            this.pnlAzulFondo.TabIndex = 2;
+            // 
+            // pnlAzulFondo2
+            // 
+            this.pnlAzulFondo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
+            this.pnlAzulFondo2.Controls.Add(this.button1);
+            this.pnlAzulFondo2.Controls.Add(this.txtbEmail);
+            this.pnlAzulFondo2.Controls.Add(this.lblEmail);
+            this.pnlAzulFondo2.Controls.Add(this.txtbxTelefono);
+            this.pnlAzulFondo2.Controls.Add(this.lblTelefono);
+            this.pnlAzulFondo2.Controls.Add(this.txtbxCodigo);
+            this.pnlAzulFondo2.Controls.Add(this.lblCodigoPostal);
+            this.pnlAzulFondo2.Controls.Add(this.txtbxDireccion);
+            this.pnlAzulFondo2.Controls.Add(this.lblDireccion);
+            this.pnlAzulFondo2.Controls.Add(this.txtbxDestinatario);
+            this.pnlAzulFondo2.Controls.Add(this.lblDestinatario);
+            this.pnlAzulFondo2.Location = new System.Drawing.Point(24, 27);
+            this.pnlAzulFondo2.Name = "pnlAzulFondo2";
+            this.pnlAzulFondo2.Size = new System.Drawing.Size(487, 323);
+            this.pnlAzulFondo2.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(210)))), ((int)(((byte)(235)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(196, 275);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 28);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Aceptar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // txtbEmail
+            // 
+            this.txtbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.txtbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbEmail.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbEmail.Location = new System.Drawing.Point(147, 230);
+            this.txtbEmail.Name = "txtbEmail";
+            this.txtbEmail.Size = new System.Drawing.Size(200, 19);
+            this.txtbEmail.TabIndex = 9;
+            this.txtbEmail.Text = "E-MAIL";
+            this.txtbEmail.Enter += new System.EventHandler(this.txtbEmail_Enter);
+            this.txtbEmail.Leave += new System.EventHandler(this.txtbEmail_Leave);
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(17, 230);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(77, 21);
+            this.lblEmail.TabIndex = 8;
+            this.lblEmail.Text = "E-Mail:";
+            // 
+            // txtbxTelefono
+            // 
+            this.txtbxTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.txtbxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbxTelefono.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxTelefono.Location = new System.Drawing.Point(147, 180);
+            this.txtbxTelefono.Name = "txtbxTelefono";
+            this.txtbxTelefono.Size = new System.Drawing.Size(200, 19);
+            this.txtbxTelefono.TabIndex = 7;
+            this.txtbxTelefono.Text = "TELEFONO";
+            this.txtbxTelefono.Enter += new System.EventHandler(this.txtbxTelefono_Enter);
+            this.txtbxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxTelefono_KeyPress);
+            this.txtbxTelefono.Leave += new System.EventHandler(this.txtbxTelefono_Leave);
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Location = new System.Drawing.Point(17, 180);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(98, 21);
+            this.lblTelefono.TabIndex = 6;
+            this.lblTelefono.Text = "Telefono: ";
+            // 
+            // txtbxCodigo
+            // 
+            this.txtbxCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.txtbxCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbxCodigo.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxCodigo.Location = new System.Drawing.Point(156, 130);
+            this.txtbxCodigo.Name = "txtbxCodigo";
+            this.txtbxCodigo.Size = new System.Drawing.Size(191, 19);
+            this.txtbxCodigo.TabIndex = 5;
+            this.txtbxCodigo.Text = "CODIGO";
+            this.txtbxCodigo.Enter += new System.EventHandler(this.txtbxCodigo_Enter);
+            this.txtbxCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxCodigo_KeyPress);
+            this.txtbxCodigo.Leave += new System.EventHandler(this.txtbxCodigo_Leave);
+            // 
+            // lblCodigoPostal
+            // 
+            this.lblCodigoPostal.AutoSize = true;
+            this.lblCodigoPostal.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoPostal.Location = new System.Drawing.Point(17, 130);
+            this.lblCodigoPostal.Name = "lblCodigoPostal";
+            this.lblCodigoPostal.Size = new System.Drawing.Size(133, 21);
+            this.lblCodigoPostal.TabIndex = 4;
+            this.lblCodigoPostal.Text = "Codigo Postal:";
+            // 
+            // txtbxDireccion
+            // 
+            this.txtbxDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.txtbxDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbxDireccion.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxDireccion.Location = new System.Drawing.Point(147, 80);
+            this.txtbxDireccion.Name = "txtbxDireccion";
+            this.txtbxDireccion.Size = new System.Drawing.Size(200, 19);
+            this.txtbxDireccion.TabIndex = 3;
+            this.txtbxDireccion.Text = "DIRECCION";
+            this.txtbxDireccion.Enter += new System.EventHandler(this.txtbxDireccion_Enter);
+            this.txtbxDireccion.Leave += new System.EventHandler(this.txtbxDireccion_Leave);
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(17, 80);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(106, 21);
+            this.lblDireccion.TabIndex = 2;
+            this.lblDireccion.Text = "Direccion: ";
+            // 
+            // txtbxDestinatario
+            // 
+            this.txtbxDestinatario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.txtbxDestinatario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbxDestinatario.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxDestinatario.Location = new System.Drawing.Point(147, 32);
+            this.txtbxDestinatario.Name = "txtbxDestinatario";
+            this.txtbxDestinatario.Size = new System.Drawing.Size(200, 19);
+            this.txtbxDestinatario.TabIndex = 1;
+            this.txtbxDestinatario.Text = "NOMBRE";
+            this.txtbxDestinatario.Enter += new System.EventHandler(this.txtbxDestinatario_Enter);
+            this.txtbxDestinatario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxDestinatario_KeyPress);
+            this.txtbxDestinatario.Leave += new System.EventHandler(this.txtbxDestinatario_Leave);
+            // 
+            // lblDestinatario
+            // 
+            this.lblDestinatario.AutoSize = true;
+            this.lblDestinatario.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDestinatario.Location = new System.Drawing.Point(17, 30);
+            this.lblDestinatario.Name = "lblDestinatario";
+            this.lblDestinatario.Size = new System.Drawing.Size(124, 21);
+            this.lblDestinatario.TabIndex = 0;
+            this.lblDestinatario.Text = "Destinatario:";
+            // 
+            // VPDestinatario
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
+            this.ClientSize = new System.Drawing.Size(810, 481);
+            this.Controls.Add(this.pnlAzulFondo);
+            this.Controls.Add(this.lblDatos);
+            this.Controls.Add(this.pnlaAzul);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "VPDestinatario";
+            this.Text = "VPDestinatario";
+            this.pnlAzulFondo.ResumeLayout(false);
+            this.pnlAzulFondo2.ResumeLayout(false);
+            this.pnlAzulFondo2.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel pnlaAzul;
+        private System.Windows.Forms.Label lblDatos;
+        private System.Windows.Forms.Panel pnlAzulFondo;
+        private System.Windows.Forms.Panel pnlAzulFondo2;
+        private System.Windows.Forms.Label lblDestinatario;
+        private System.Windows.Forms.TextBox txtbxDestinatario;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.TextBox txtbxDireccion;
+        private System.Windows.Forms.TextBox txtbxCodigo;
+        private System.Windows.Forms.Label lblCodigoPostal;
+        private System.Windows.Forms.TextBox txtbxTelefono;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtbEmail;
+        private System.Windows.Forms.Button button1;
+    }
+}

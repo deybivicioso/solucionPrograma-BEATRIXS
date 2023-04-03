@@ -37,9 +37,15 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\libreriaUI VisualStudio\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,12 +57,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BEATRIXS01DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BEATRIXS01DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="funcionamiento.cs" />
     <Compile Include="funcionesSistemas.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -89,6 +89,12 @@
     <Compile Include="ventanaP.Designer.cs">
       <DependentUpon>ventanaP.cs</DependentUpon>
     </Compile>
+    <Compile Include="VPDestinatario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VPDestinatario.Designer.cs">
+      <DependentUpon>VPDestinatario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,17 +112,9 @@
     <EmbeddedResource Include="ventanaP.resx">
       <DependentUpon>ventanaP.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="BEATRIXS01DataSet.xsc">
-      <DependentUpon>BEATRIXS01DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BEATRIXS01DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BEATRIXS01DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BEATRIXS01DataSet.xss">
-      <DependentUpon>BEATRIXS01DataSet.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="VPDestinatario.resx">
+      <DependentUpon>VPDestinatario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,13 +125,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="elementos del programa\BEATRIXS logo.jpg" />
-    <Content Include="elementos del programa\close-button.png" />
-    <Content Include="elementos del programa\minimizar.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

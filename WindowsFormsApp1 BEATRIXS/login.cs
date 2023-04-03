@@ -81,20 +81,7 @@ namespace WindowsFormsApp1_BEATRIXS
                 txtbContraseña.UseSystemPasswordChar = false;
             }
         }
-        //
-        /*evento que permite al boton cerrar, cerrar toda la plicacion*/
-        //
-        private void PCTRBCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit(); 
-        }
-        //
-        /*evento que permite al boton minimizar, minimizar toda la plicacion*/
-        //
-        private void pctrbMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+        
         //
         /*ESTE EVENTO impedira que se ingrese en la caja de texto de nombre
          cualquier que no sean letras*/

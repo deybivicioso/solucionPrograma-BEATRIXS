@@ -15,14 +15,12 @@ namespace WindowsFormsApp1_BEATRIXS
     public partial class registroUsuario : Form
     {
         funcionesSistemas bloque2 = new funcionesSistemas();       
-        funcionamiento conetar = new funcionamiento();
-        string cadena = "Data Source=localhost;Initial Catalog=BEATRIXS01;Integrated Security=True";
-        private SqlConnection conetar01 = new SqlConnection();
+       
         
         public registroUsuario()
         {
             InitializeComponent();
-            conetar01.ConnectionString = cadena;
+            
         }
         //
         /*evento click: al oprimir el el boton registrar en el formulario de registro, aparecera un mensaje 
@@ -30,43 +28,7 @@ namespace WindowsFormsApp1_BEATRIXS
         //
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            conetar.abrir();
-            try {
-                string cadena01 = "insert into registro ([nombre],[apellido], [telefono],[email],[contraseña])+" +
-                " values ('" + txtbRegistroNombre.Text + "','" + txtbRegistroApellido.Text + "','" + txtbRegistroTelefono.Text + "','" + txtbRegistroEmail.Text + "','" + txtbRegistroContraseña.Text + "')";
-                SqlCommand realizar = new SqlCommand(cadena01, conetar01);
-                MessageBox.Show("logramos insertando datos");
-            }
-            catch (Exception ex) {
-                MessageBox.Show("fallamos insertando datos" + ex.Message);
-            }
-            
-            if (txtbRegistroNombre.Text == "NOMBRE") { 
-                MessageBox.Show("Completar Solicitud de registro.", "registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; 
-            }
-            if (txtbRegistroApellido.Text == "APELLIDO")
-            {
-                MessageBox.Show("Completar Solicitud de registro.", "registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (txtbRegistroTelefono.Text == "TELEFONO")
-            {
-                MessageBox.Show("Completar Solicitud de registro.", "registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (txtbRegistroEmail.Text == "E-MAIL")
-            {
-                MessageBox.Show("Completar Solicitud de registro.", "registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (txtbRegistroContraseña.Text == "CONTRASEÑA")
-            {
-                MessageBox.Show("Completar Solicitud de registro.", "registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            MessageBox.Show("Solicitud de registro confirmada.", "registro",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            //agregar el evento correspondiente y eliminar el this.close cuando corresponda
             this.Close();
         }
         //

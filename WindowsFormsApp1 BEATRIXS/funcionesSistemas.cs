@@ -27,7 +27,7 @@ namespace WindowsFormsApp1_BEATRIXS
             }
         }
         //
-        /*este metedo nos permite bloquea la entrada de cualquier caracter que no sea alfa numerico
+        /*este metedo nos permite bloquea la entrada de cualquier caracter que no sea numerico
          en los textBox en los que deseemos aplicar dicho metodo.*/
         //
         public void bloqueoNumeros(KeyPressEventArgs e) {
@@ -37,7 +37,7 @@ namespace WindowsFormsApp1_BEATRIXS
             else
             {
                 e.Handled = true;
-                MessageBox.Show("solo caracteres alfabeticos", "advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("solo caracteres numericos", "advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
