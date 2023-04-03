@@ -43,13 +43,24 @@
             this.lblDireccion = new System.Windows.Forms.Label();
             this.txtbxDestinatario = new System.Windows.Forms.TextBox();
             this.lblDestinatario = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pctrbLogo5 = new System.Windows.Forms.PictureBox();
+            this.pctrbCerrar5 = new System.Windows.Forms.PictureBox();
+            this.pctrbMinimizar5 = new System.Windows.Forms.PictureBox();
+            this.pnlaAzul.SuspendLayout();
             this.pnlAzulFondo.SuspendLayout();
             this.pnlAzulFondo2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbLogo5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbCerrar5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbMinimizar5)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlaAzul
             // 
             this.pnlaAzul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
+            this.pnlaAzul.Controls.Add(this.pctrbLogo5);
+            this.pnlaAzul.Controls.Add(this.pictureBox1);
             this.pnlaAzul.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlaAzul.Location = new System.Drawing.Point(0, 0);
             this.pnlaAzul.Name = "pnlaAzul";
@@ -227,21 +238,68 @@
             this.lblDestinatario.TabIndex = 0;
             this.lblDestinatario.Text = "Destinatario:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(43, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pctrbLogo5
+            // 
+            this.pctrbLogo5.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.logoPrincipal;
+            this.pctrbLogo5.Location = new System.Drawing.Point(3, 64);
+            this.pctrbLogo5.Name = "pctrbLogo5";
+            this.pctrbLogo5.Size = new System.Drawing.Size(213, 116);
+            this.pctrbLogo5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrbLogo5.TabIndex = 1;
+            this.pctrbLogo5.TabStop = false;
+            // 
+            // pctrbCerrar5
+            // 
+            this.pctrbCerrar5.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.closse;
+            this.pctrbCerrar5.Location = new System.Drawing.Point(779, 0);
+            this.pctrbCerrar5.Name = "pctrbCerrar5";
+            this.pctrbCerrar5.Size = new System.Drawing.Size(30, 30);
+            this.pctrbCerrar5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrbCerrar5.TabIndex = 3;
+            this.pctrbCerrar5.TabStop = false;
+            this.pctrbCerrar5.Click += new System.EventHandler(this.pctrbCerrar5_Click);
+            // 
+            // pctrbMinimizar5
+            // 
+            this.pctrbMinimizar5.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.minuss;
+            this.pctrbMinimizar5.Location = new System.Drawing.Point(743, 0);
+            this.pctrbMinimizar5.Name = "pctrbMinimizar5";
+            this.pctrbMinimizar5.Size = new System.Drawing.Size(30, 30);
+            this.pctrbMinimizar5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrbMinimizar5.TabIndex = 4;
+            this.pctrbMinimizar5.TabStop = false;
+            this.pctrbMinimizar5.Click += new System.EventHandler(this.pctrbMinimizar5_Click);
+            // 
             // VPDestinatario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(810, 481);
+            this.Controls.Add(this.pctrbMinimizar5);
+            this.Controls.Add(this.pctrbCerrar5);
             this.Controls.Add(this.pnlAzulFondo);
             this.Controls.Add(this.lblDatos);
             this.Controls.Add(this.pnlaAzul);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VPDestinatario";
             this.Text = "VPDestinatario";
+            this.pnlaAzul.ResumeLayout(false);
             this.pnlAzulFondo.ResumeLayout(false);
             this.pnlAzulFondo2.ResumeLayout(false);
             this.pnlAzulFondo2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbLogo5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbCerrar5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbMinimizar5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +322,9 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtbEmail;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pctrbLogo5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pctrbCerrar5;
+        private System.Windows.Forms.PictureBox pctrbMinimizar5;
     }
 }

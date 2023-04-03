@@ -14,6 +14,7 @@ namespace WindowsFormsApp1_BEATRIXS
    
     public partial class registroUsuario : Form
     {
+       
         funcionesSistemas bloque2 = new funcionesSistemas();       
        
         
@@ -28,8 +29,18 @@ namespace WindowsFormsApp1_BEATRIXS
         //
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            //agregar el evento correspondiente y eliminar el this.close cuando corresponda
-            this.Close();
+            if (txtbRegistroNombre.Text == "NOMBRE" & txtbRegistroApellido.Text == "APELLIDO" & txtbRegistroTelefono.Text == "TELEFONO" &
+                txtbRegistroEmail.Text == "E-MAIL" & txtbRegistroContraseña.Text == "CONTRASEÑA")
+            {
+                MessageBox.Show("completar el formulario", "mesage", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (txtbRegistroNombre.Text != "NOMBRE" & txtbRegistroApellido.Text != "APELLIDO" & txtbRegistroTelefono.Text != "TELEFONO" &
+                txtbRegistroEmail.Text != "E-MAIL" & txtbRegistroContraseña.Text != "CONTRASEÑA") 
+            {
+                /*en este espacion antes del this.close  se debe agregar el codigo para agregar datos a la base de datos.*/
+                this.Close();
+            }
+            
         }
         //
         /*evento enter: efecto visual para la casilla donde el usuario ingresa su nombre*/
@@ -169,6 +180,20 @@ namespace WindowsFormsApp1_BEATRIXS
         private void txtbRegistroTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             bloque2.bloqueoNumeros(e);
+        }
+        //
+        /*con este evento configuramos el boton de cerrar el programa desde el formulario registro usuario.*/
+        //
+        private void pctrbCerrar3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        //
+        /*con este evento configuramos la funcion del boton de minimizar del formulario registro usiario.*/
+        //
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

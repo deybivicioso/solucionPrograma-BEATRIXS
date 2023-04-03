@@ -41,7 +41,14 @@ namespace WindowsFormsApp1_BEATRIXS
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pctrbLogo2 = new System.Windows.Forms.PictureBox();
+            this.pctrbCerrar2 = new System.Windows.Forms.PictureBox();
+            this.pctrbMinimizar2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbLogo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbCerrar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbMinimizar2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +71,7 @@ namespace WindowsFormsApp1_BEATRIXS
             this.panel2.Controls.Add(this.txtbNombre);
             this.panel2.Controls.Add(this.lblNombre);
             this.panel2.Controls.Add(this.lblLogin);
-            this.panel2.Location = new System.Drawing.Point(242, 33);
+            this.panel2.Location = new System.Drawing.Point(287, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(460, 333);
             this.panel2.TabIndex = 3;
@@ -174,11 +181,44 @@ namespace WindowsFormsApp1_BEATRIXS
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
+            this.panel3.Controls.Add(this.pctrbLogo2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 392);
+            this.panel3.Size = new System.Drawing.Size(218, 392);
             this.panel3.TabIndex = 2;
+            // 
+            // pctrbLogo2
+            // 
+            this.pctrbLogo2.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.logoPrincipal;
+            this.pctrbLogo2.Location = new System.Drawing.Point(3, 33);
+            this.pctrbLogo2.Name = "pctrbLogo2";
+            this.pctrbLogo2.Size = new System.Drawing.Size(213, 123);
+            this.pctrbLogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrbLogo2.TabIndex = 0;
+            this.pctrbLogo2.TabStop = false;
+            // 
+            // pctrbCerrar2
+            // 
+            this.pctrbCerrar2.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.closse;
+            this.pctrbCerrar2.Location = new System.Drawing.Point(780, 0);
+            this.pctrbCerrar2.Name = "pctrbCerrar2";
+            this.pctrbCerrar2.Size = new System.Drawing.Size(30, 30);
+            this.pctrbCerrar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctrbCerrar2.TabIndex = 7;
+            this.pctrbCerrar2.TabStop = false;
+            this.pctrbCerrar2.Click += new System.EventHandler(this.pctrbCerrar2_Click);
+            // 
+            // pctrbMinimizar2
+            // 
+            this.pctrbMinimizar2.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.minuss;
+            this.pctrbMinimizar2.Location = new System.Drawing.Point(753, 0);
+            this.pctrbMinimizar2.Name = "pctrbMinimizar2";
+            this.pctrbMinimizar2.Size = new System.Drawing.Size(30, 30);
+            this.pctrbMinimizar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctrbMinimizar2.TabIndex = 8;
+            this.pctrbMinimizar2.TabStop = false;
+            this.pctrbMinimizar2.Click += new System.EventHandler(this.pctrbMinimizar2_Click);
             // 
             // login
             // 
@@ -187,6 +227,8 @@ namespace WindowsFormsApp1_BEATRIXS
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(812, 392);
+            this.Controls.Add(this.pctrbMinimizar2);
+            this.Controls.Add(this.pctrbCerrar2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
@@ -197,6 +239,10 @@ namespace WindowsFormsApp1_BEATRIXS
             this.Text = "LOGIN";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbLogo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbCerrar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbMinimizar2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,5 +261,8 @@ namespace WindowsFormsApp1_BEATRIXS
         private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.LinkLabel lnklblLogin;
+        private System.Windows.Forms.PictureBox pctrbLogo2;
+        private System.Windows.Forms.PictureBox pctrbCerrar2;
+        private System.Windows.Forms.PictureBox pctrbMinimizar2;
     }
 }

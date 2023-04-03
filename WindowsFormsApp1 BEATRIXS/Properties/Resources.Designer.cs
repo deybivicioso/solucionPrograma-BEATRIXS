@@ -63,9 +63,29 @@ namespace WindowsFormsApp1_BEATRIXS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap closse {
+            get {
+                object obj = ResourceManager.GetObject("closse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoPrincipal {
             get {
                 object obj = ResourceManager.GetObject("logoPrincipal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minuss {
+            get {
+                object obj = ResourceManager.GetObject("minuss", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -153,5 +153,19 @@ namespace WindowsFormsApp1_BEATRIXS
                 txtbEmail.ForeColor = Color.Black;
             }
         }
+        //
+        /*configuracion del boton cerrar del formulario VPDestinatario.*/
+        //
+        private void pctrbCerrar5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        //
+        /*configuracion del boton minimizar del formulario VPDestinatario. */
+        //
+        private void pctrbMinimizar5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

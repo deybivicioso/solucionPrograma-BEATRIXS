@@ -89,6 +89,19 @@ namespace WindowsFormsApp1_BEATRIXS
         {
             bloqueo.bloqueoLetras(e);
         }
-       
+        //
+        /*con este evetno configuramos el boton de cerrar aplicacion del form login.*/
+        //        
+        private void pctrbCerrar2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        //
+        /*con ester evento configuramos el boton de minizar del form Login.*/
+        //
+        private void pctrbMinimizar2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

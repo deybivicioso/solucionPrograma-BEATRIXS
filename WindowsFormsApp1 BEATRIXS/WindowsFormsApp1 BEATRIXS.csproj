@@ -126,7 +126,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="image\closse.png" />
     <Content Include="image\logoPrincipal.png" />
+    <Content Include="image\minuss.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

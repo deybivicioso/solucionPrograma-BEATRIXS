@@ -52,7 +52,20 @@ namespace WindowsFormsApp1_BEATRIXS
             }          
             
         }
+        //
+        /*con este evento el boton cerrar, podra cerrar la aplicacion*/
+        //
+        private void pctrbCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        //
+        /*con este evento configuramos el boton minimizar, para que cumpla su funcion.*/
+        //
+        private void pctrbMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
 
-      
+        }
     }
 }

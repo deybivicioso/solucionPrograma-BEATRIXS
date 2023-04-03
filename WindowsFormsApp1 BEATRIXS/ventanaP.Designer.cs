@@ -43,8 +43,15 @@
             this.lblNombreProducto = new System.Windows.Forms.Label();
             this.lblVentanaPTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pctrbLogo4 = new System.Windows.Forms.PictureBox();
+            this.pctrbCerrar4 = new System.Windows.Forms.PictureBox();
+            this.pctrbMinimizar4 = new System.Windows.Forms.PictureBox();
             this.pnlVentanaP1.SuspendLayout();
             this.pnlVentanaP2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbLogo4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbCerrar4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbMinimizar4)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlVentanaP1
@@ -52,9 +59,9 @@
             this.pnlVentanaP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
             this.pnlVentanaP1.Controls.Add(this.btnVentanaPAceptar);
             this.pnlVentanaP1.Controls.Add(this.pnlVentanaP2);
-            this.pnlVentanaP1.Location = new System.Drawing.Point(206, 58);
+            this.pnlVentanaP1.Location = new System.Drawing.Point(268, 65);
             this.pnlVentanaP1.Name = "pnlVentanaP1";
-            this.pnlVentanaP1.Size = new System.Drawing.Size(634, 437);
+            this.pnlVentanaP1.Size = new System.Drawing.Size(539, 389);
             this.pnlVentanaP1.TabIndex = 0;
             // 
             // btnVentanaPAceptar
@@ -65,7 +72,7 @@
             this.btnVentanaPAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
             this.btnVentanaPAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentanaPAceptar.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentanaPAceptar.Location = new System.Drawing.Point(276, 384);
+            this.btnVentanaPAceptar.Location = new System.Drawing.Point(227, 337);
             this.btnVentanaPAceptar.Name = "btnVentanaPAceptar";
             this.btnVentanaPAceptar.Size = new System.Drawing.Size(85, 28);
             this.btnVentanaPAceptar.TabIndex = 0;
@@ -75,7 +82,7 @@
             // 
             // pnlVentanaP2
             // 
-            this.pnlVentanaP2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pnlVentanaP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
             this.pnlVentanaP2.Controls.Add(this.chckbxToxico);
             this.pnlVentanaP2.Controls.Add(this.chckbxInflamable);
             this.pnlVentanaP2.Controls.Add(this.lbltipoMaterial);
@@ -86,9 +93,9 @@
             this.pnlVentanaP2.Controls.Add(this.lblMaterialProducto);
             this.pnlVentanaP2.Controls.Add(this.txtbNombreProducto);
             this.pnlVentanaP2.Controls.Add(this.lblNombreProducto);
-            this.pnlVentanaP2.Location = new System.Drawing.Point(17, 15);
+            this.pnlVentanaP2.Location = new System.Drawing.Point(30, 13);
             this.pnlVentanaP2.Name = "pnlVentanaP2";
-            this.pnlVentanaP2.Size = new System.Drawing.Size(253, 352);
+            this.pnlVentanaP2.Size = new System.Drawing.Size(476, 318);
             this.pnlVentanaP2.TabIndex = 0;
             // 
             // chckbxToxico
@@ -135,14 +142,14 @@
             // 
             // cmbbMaterialProucto
             // 
-            this.cmbbMaterialProucto.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cmbbMaterialProucto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
             this.cmbbMaterialProucto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbbMaterialProucto.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbbMaterialProucto.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbbMaterialProucto.FormattingEnabled = true;
             this.cmbbMaterialProucto.Location = new System.Drawing.Point(15, 111);
             this.cmbbMaterialProucto.Name = "cmbbMaterialProucto";
-            this.cmbbMaterialProucto.Size = new System.Drawing.Size(165, 24);
+            this.cmbbMaterialProucto.Size = new System.Drawing.Size(197, 24);
             this.cmbbMaterialProucto.TabIndex = 8;
             this.cmbbMaterialProucto.Text = "None";
             this.cmbbMaterialProucto.Enter += new System.EventHandler(this.cmbbMaterialProucto_Enter);
@@ -150,7 +157,7 @@
             // 
             // txtbPesomaterial
             // 
-            this.txtbPesomaterial.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txtbPesomaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
             this.txtbPesomaterial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbPesomaterial.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbPesomaterial.Location = new System.Drawing.Point(18, 171);
@@ -184,7 +191,7 @@
             // 
             // txtbNombreProducto
             // 
-            this.txtbNombreProducto.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txtbNombreProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
             this.txtbNombreProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbNombreProducto.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbNombreProducto.Location = new System.Drawing.Point(15, 51);
@@ -210,7 +217,7 @@
             // 
             this.lblVentanaPTitulo.AutoSize = true;
             this.lblVentanaPTitulo.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVentanaPTitulo.Location = new System.Drawing.Point(359, 9);
+            this.lblVentanaPTitulo.Location = new System.Drawing.Point(335, 9);
             this.lblVentanaPTitulo.Name = "lblVentanaPTitulo";
             this.lblVentanaPTitulo.Size = new System.Drawing.Size(377, 29);
             this.lblVentanaPTitulo.TabIndex = 1;
@@ -219,18 +226,53 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
+            this.panel1.Controls.Add(this.pctrbLogo4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 507);
+            this.panel1.Size = new System.Drawing.Size(230, 507);
             this.panel1.TabIndex = 2;
+            // 
+            // pctrbLogo4
+            // 
+            this.pctrbLogo4.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.logoPrincipal;
+            this.pctrbLogo4.Location = new System.Drawing.Point(3, 45);
+            this.pctrbLogo4.Name = "pctrbLogo4";
+            this.pctrbLogo4.Size = new System.Drawing.Size(224, 125);
+            this.pctrbLogo4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrbLogo4.TabIndex = 0;
+            this.pctrbLogo4.TabStop = false;
+            // 
+            // pctrbCerrar4
+            // 
+            this.pctrbCerrar4.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.closse;
+            this.pctrbCerrar4.Location = new System.Drawing.Point(824, 0);
+            this.pctrbCerrar4.Name = "pctrbCerrar4";
+            this.pctrbCerrar4.Size = new System.Drawing.Size(30, 30);
+            this.pctrbCerrar4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrbCerrar4.TabIndex = 3;
+            this.pctrbCerrar4.TabStop = false;
+            this.pctrbCerrar4.Click += new System.EventHandler(this.pctrbCerrar4_Click);
+            // 
+            // pctrbMinimizar4
+            // 
+            this.pctrbMinimizar4.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.minuss;
+            this.pctrbMinimizar4.Location = new System.Drawing.Point(788, 0);
+            this.pctrbMinimizar4.Name = "pctrbMinimizar4";
+            this.pctrbMinimizar4.Size = new System.Drawing.Size(30, 30);
+            this.pctrbMinimizar4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrbMinimizar4.TabIndex = 4;
+            this.pctrbMinimizar4.TabStop = false;
+            this.pctrbMinimizar4.Click += new System.EventHandler(this.pctrbMinimizar4_Click);
             // 
             // ventanaP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
-            this.ClientSize = new System.Drawing.Size(881, 507);
+            this.ClientSize = new System.Drawing.Size(856, 507);
+            this.Controls.Add(this.pctrbMinimizar4);
+            this.Controls.Add(this.pctrbCerrar4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblVentanaPTitulo);
             this.Controls.Add(this.pnlVentanaP1);
@@ -241,6 +283,10 @@
             this.pnlVentanaP1.ResumeLayout(false);
             this.pnlVentanaP2.ResumeLayout(false);
             this.pnlVentanaP2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbLogo4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbCerrar4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbMinimizar4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +309,8 @@
         private System.Windows.Forms.Button btnVentanaPAceptar;
         private System.Windows.Forms.Label lblVentanaPTitulo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pctrbLogo4;
+        private System.Windows.Forms.PictureBox pctrbCerrar4;
+        private System.Windows.Forms.PictureBox pctrbMinimizar4;
     }
 }

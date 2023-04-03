@@ -128,5 +128,19 @@ namespace WindowsFormsApp1_BEATRIXS
            
 
         }
+        //
+        /*configuracion del booton cerrar del formulario ventanaP.*/
+        //
+        private void pctrbCerrar4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        //
+        /*configuracion del boton minimizar del formulario ventanaP.*/
+        //
+        private void pctrbMinimizar4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

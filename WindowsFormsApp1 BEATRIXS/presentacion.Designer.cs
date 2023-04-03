@@ -30,16 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelPresentacion = new System.Windows.Forms.Panel();
+            this.ptrbLogo1 = new System.Windows.Forms.PictureBox();
             this.prgrbCarga = new System.Windows.Forms.ProgressBar();
             this.lblCargando = new System.Windows.Forms.Label();
             this.tmrPresentacion = new System.Windows.Forms.Timer(this.components);
             this.lblPocertajeCarga = new System.Windows.Forms.Label();
             this.lblLogoPorciento = new System.Windows.Forms.Label();
+            this.pctrbMinimizar1 = new System.Windows.Forms.PictureBox();
+            this.pctrbCerrar1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ptrbLogo1 = new System.Windows.Forms.PictureBox();
             this.panelPresentacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptrbLogo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbMinimizar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbCerrar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPresentacion
@@ -50,6 +54,16 @@
             this.panelPresentacion.Name = "panelPresentacion";
             this.panelPresentacion.Size = new System.Drawing.Size(422, 217);
             this.panelPresentacion.TabIndex = 0;
+            // 
+            // ptrbLogo1
+            // 
+            this.ptrbLogo1.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.logoPrincipal;
+            this.ptrbLogo1.Location = new System.Drawing.Point(24, 27);
+            this.ptrbLogo1.Name = "ptrbLogo1";
+            this.ptrbLogo1.Size = new System.Drawing.Size(357, 168);
+            this.ptrbLogo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptrbLogo1.TabIndex = 0;
+            this.ptrbLogo1.TabStop = false;
             // 
             // prgrbCarga
             // 
@@ -95,6 +109,28 @@
             this.lblLogoPorciento.TabIndex = 4;
             this.lblLogoPorciento.Text = "%";
             // 
+            // pctrbMinimizar1
+            // 
+            this.pctrbMinimizar1.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.minuss;
+            this.pctrbMinimizar1.Location = new System.Drawing.Point(586, 0);
+            this.pctrbMinimizar1.Name = "pctrbMinimizar1";
+            this.pctrbMinimizar1.Size = new System.Drawing.Size(30, 30);
+            this.pctrbMinimizar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctrbMinimizar1.TabIndex = 7;
+            this.pctrbMinimizar1.TabStop = false;
+            this.pctrbMinimizar1.Click += new System.EventHandler(this.pctrbMinimizar_Click);
+            // 
+            // pctrbCerrar1
+            // 
+            this.pctrbCerrar1.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.closse;
+            this.pctrbCerrar1.Location = new System.Drawing.Point(613, 0);
+            this.pctrbCerrar1.Name = "pctrbCerrar1";
+            this.pctrbCerrar1.Size = new System.Drawing.Size(30, 30);
+            this.pctrbCerrar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctrbCerrar1.TabIndex = 6;
+            this.pctrbCerrar1.TabStop = false;
+            this.pctrbCerrar1.Click += new System.EventHandler(this.pctrbCerrar_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -103,22 +139,14 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // ptrbLogo1
-            // 
-            this.ptrbLogo1.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.logoPrincipal;
-            this.ptrbLogo1.Location = new System.Drawing.Point(24, 27);
-            this.ptrbLogo1.Name = "ptrbLogo1";
-            this.ptrbLogo1.Size = new System.Drawing.Size(357, 168);
-            this.ptrbLogo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptrbLogo1.TabIndex = 0;
-            this.ptrbLogo1.TabStop = false;
-            // 
             // presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(644, 360);
+            this.Controls.Add(this.pctrbMinimizar1);
+            this.Controls.Add(this.pctrbCerrar1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblLogoPorciento);
             this.Controls.Add(this.lblPocertajeCarga);
@@ -133,8 +161,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.presentacion_FormClosing);
             this.Load += new System.EventHandler(this.presentacion_Load);
             this.panelPresentacion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptrbLogo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbMinimizar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbCerrar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,6 +180,8 @@
         private System.Windows.Forms.Label lblLogoPorciento;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox ptrbLogo1;
+        private System.Windows.Forms.PictureBox pctrbCerrar1;
+        private System.Windows.Forms.PictureBox pctrbMinimizar1;
     }
 }
 
