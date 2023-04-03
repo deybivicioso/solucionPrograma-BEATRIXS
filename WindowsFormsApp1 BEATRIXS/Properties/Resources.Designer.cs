@@ -59,5 +59,15 @@ namespace WindowsFormsApp1_BEATRIXS.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoPrincipal {
+            get {
+                object obj = ResourceManager.GetObject("logoPrincipal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -36,12 +36,16 @@
             this.lblPocertajeCarga = new System.Windows.Forms.Label();
             this.lblLogoPorciento = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptrbLogo1 = new System.Windows.Forms.PictureBox();
+            this.panelPresentacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLogo1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPresentacion
             // 
             this.panelPresentacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
+            this.panelPresentacion.Controls.Add(this.ptrbLogo1);
             this.panelPresentacion.Location = new System.Drawing.Point(104, 41);
             this.panelPresentacion.Name = "panelPresentacion";
             this.panelPresentacion.Size = new System.Drawing.Size(422, 217);
@@ -99,6 +103,16 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // ptrbLogo1
+            // 
+            this.ptrbLogo1.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.logoPrincipal;
+            this.ptrbLogo1.Location = new System.Drawing.Point(24, 27);
+            this.ptrbLogo1.Name = "ptrbLogo1";
+            this.ptrbLogo1.Size = new System.Drawing.Size(357, 168);
+            this.ptrbLogo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptrbLogo1.TabIndex = 0;
+            this.ptrbLogo1.TabStop = false;
+            // 
             // presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,7 +132,9 @@
             this.Text = "BEATRIXS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.presentacion_FormClosing);
             this.Load += new System.EventHandler(this.presentacion_Load);
+            this.panelPresentacion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLogo1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +149,7 @@
         private System.Windows.Forms.Label lblPocertajeCarga;
         private System.Windows.Forms.Label lblLogoPorciento;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptrbLogo1;
     }
 }
 
