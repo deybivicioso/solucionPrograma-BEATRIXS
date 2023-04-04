@@ -167,5 +167,21 @@ namespace WindowsFormsApp1_BEATRIXS
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        //
+        /*en este evento guardaremos la informacion del formulario en la BBDD*/
+         // 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //en esta linea ingrese la instruccion para guardar los datos en la base de datos.
+            
+        }
+        //
+        /*con este evento retornaremos al formulario ventanaP.*/
+        //
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            ventanaP nueva=new ventanaP();
+            nueva.ShowDialog();
+        }
     }
 }

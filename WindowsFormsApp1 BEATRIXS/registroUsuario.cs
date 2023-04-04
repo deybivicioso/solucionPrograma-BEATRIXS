@@ -195,5 +195,13 @@ namespace WindowsFormsApp1_BEATRIXS
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        //
+        /*con el evento del boton regresar del formulario registro, cerraremos el formaulario en cuestion y volveremos al
+         formulario principal.*/
+        //
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

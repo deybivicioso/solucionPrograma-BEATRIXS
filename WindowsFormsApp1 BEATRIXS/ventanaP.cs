@@ -125,8 +125,8 @@ namespace WindowsFormsApp1_BEATRIXS
         //
         private void btnVentanaPAceptar_Click(object sender, EventArgs e)
         {
-           
-
+            //aqui debe ingresar el codigo para guardar la onformacion del formulario en la BBDD.
+            this.Close();
         }
         //
         /*configuracion del booton cerrar del formulario ventanaP.*/

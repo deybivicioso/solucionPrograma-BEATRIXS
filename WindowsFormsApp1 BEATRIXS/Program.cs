@@ -20,7 +20,7 @@ namespace WindowsFormsApp1_BEATRIXS
             Application.Run(new presentacion());
             Application.Run(new login());            
             Application.Run(new ventanaP());
-           
+            Application.Run(new VPDestinatario());
         }
         
     }

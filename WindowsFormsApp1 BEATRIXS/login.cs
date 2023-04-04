@@ -44,9 +44,7 @@ namespace WindowsFormsApp1_BEATRIXS
             {
                 txtbNombre.Text = " ";
                 txtbNombre.ForeColor = Color.Black;
-            }
-           
-                    
+            }         
         }
         //
         /*este evento funciona igual que el eventoque esta sobre el, solo que con el textBox contraseña*/

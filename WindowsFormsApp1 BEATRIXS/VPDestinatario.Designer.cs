@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlaAzul = new System.Windows.Forms.Panel();
+            this.pctrbLogo5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDatos = new System.Windows.Forms.Label();
             this.pnlAzulFondo = new System.Windows.Forms.Panel();
             this.pnlAzulFondo2 = new System.Windows.Forms.Panel();
@@ -43,15 +45,14 @@
             this.lblDireccion = new System.Windows.Forms.Label();
             this.txtbxDestinatario = new System.Windows.Forms.TextBox();
             this.lblDestinatario = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pctrbLogo5 = new System.Windows.Forms.PictureBox();
             this.pctrbCerrar5 = new System.Windows.Forms.PictureBox();
             this.pctrbMinimizar5 = new System.Windows.Forms.PictureBox();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.pnlaAzul.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbLogo5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAzulFondo.SuspendLayout();
             this.pnlAzulFondo2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctrbLogo5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrbCerrar5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrbMinimizar5)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +67,24 @@
             this.pnlaAzul.Name = "pnlaAzul";
             this.pnlaAzul.Size = new System.Drawing.Size(219, 481);
             this.pnlaAzul.TabIndex = 0;
+            // 
+            // pctrbLogo5
+            // 
+            this.pctrbLogo5.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.logoPrincipal;
+            this.pctrbLogo5.Location = new System.Drawing.Point(3, 64);
+            this.pctrbLogo5.Name = "pctrbLogo5";
+            this.pctrbLogo5.Size = new System.Drawing.Size(213, 116);
+            this.pctrbLogo5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrbLogo5.TabIndex = 1;
+            this.pctrbLogo5.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(43, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // lblDatos
             // 
@@ -89,6 +108,7 @@
             // pnlAzulFondo2
             // 
             this.pnlAzulFondo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
+            this.pnlAzulFondo2.Controls.Add(this.btnRegresar);
             this.pnlAzulFondo2.Controls.Add(this.button1);
             this.pnlAzulFondo2.Controls.Add(this.txtbEmail);
             this.pnlAzulFondo2.Controls.Add(this.lblEmail);
@@ -113,12 +133,13 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(196, 275);
+            this.button1.Location = new System.Drawing.Point(262, 272);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 28);
-            this.button1.TabIndex = 10;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtbEmail
             // 
@@ -222,7 +243,7 @@
             this.txtbxDestinatario.Location = new System.Drawing.Point(147, 32);
             this.txtbxDestinatario.Name = "txtbxDestinatario";
             this.txtbxDestinatario.Size = new System.Drawing.Size(200, 19);
-            this.txtbxDestinatario.TabIndex = 1;
+            this.txtbxDestinatario.TabIndex = 10;
             this.txtbxDestinatario.Text = "NOMBRE";
             this.txtbxDestinatario.Enter += new System.EventHandler(this.txtbxDestinatario_Enter);
             this.txtbxDestinatario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxDestinatario_KeyPress);
@@ -237,24 +258,6 @@
             this.lblDestinatario.Size = new System.Drawing.Size(124, 21);
             this.lblDestinatario.TabIndex = 0;
             this.lblDestinatario.Text = "Destinatario:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(43, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pctrbLogo5
-            // 
-            this.pctrbLogo5.Image = global::WindowsFormsApp1_BEATRIXS.Properties.Resources.logoPrincipal;
-            this.pctrbLogo5.Location = new System.Drawing.Point(3, 64);
-            this.pctrbLogo5.Name = "pctrbLogo5";
-            this.pctrbLogo5.Size = new System.Drawing.Size(213, 116);
-            this.pctrbLogo5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctrbLogo5.TabIndex = 1;
-            this.pctrbLogo5.TabStop = false;
             // 
             // pctrbCerrar5
             // 
@@ -278,6 +281,22 @@
             this.pctrbMinimizar5.TabStop = false;
             this.pctrbMinimizar5.Click += new System.EventHandler(this.pctrbMinimizar5_Click);
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.btnRegresar.FlatAppearance.BorderSize = 0;
+            this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(210)))), ((int)(((byte)(235)))));
+            this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresar.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Location = new System.Drawing.Point(168, 272);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(85, 28);
+            this.btnRegresar.TabIndex = 11;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // VPDestinatario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,11 +312,11 @@
             this.Name = "VPDestinatario";
             this.Text = "VPDestinatario";
             this.pnlaAzul.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbLogo5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlAzulFondo.ResumeLayout(false);
             this.pnlAzulFondo2.ResumeLayout(false);
             this.pnlAzulFondo2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctrbLogo5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrbCerrar5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrbMinimizar5)).EndInit();
             this.ResumeLayout(false);
@@ -326,5 +345,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pctrbCerrar5;
         private System.Windows.Forms.PictureBox pctrbMinimizar5;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }
