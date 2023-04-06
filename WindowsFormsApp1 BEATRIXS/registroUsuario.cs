@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -29,6 +30,15 @@ namespace WindowsFormsApp1_BEATRIXS
         //
         private void btnRegistro_Click(object sender, EventArgs e)
         {
+            //
+            //cadena de conecion a BBDD
+            //
+            SqlConnection sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = ConfigurationManager.ConnectionStrings["StringKey"].ConnectionString;
+            sqlConnection.Open(); 
+            //
+            //control de regostro
+            //
             if (txtbRegistroNombre.Text == "NOMBRE" & txtbRegistroApellido.Text == "APELLIDO" & txtbRegistroTelefono.Text == "TELEFONO" &
                 txtbRegistroEmail.Text == "E-MAIL" & txtbRegistroContraseña.Text == "CONTRASEÑA")
             {

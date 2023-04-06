@@ -34,6 +34,7 @@
             this.lblDatos = new System.Windows.Forms.Label();
             this.pnlAzulFondo = new System.Windows.Forms.Panel();
             this.pnlAzulFondo2 = new System.Windows.Forms.Panel();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtbEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.lblDestinatario = new System.Windows.Forms.Label();
             this.pctrbCerrar5 = new System.Windows.Forms.PictureBox();
             this.pctrbMinimizar5 = new System.Windows.Forms.PictureBox();
-            this.btnRegresar = new System.Windows.Forms.Button();
             this.pnlaAzul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrbLogo5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -124,6 +124,22 @@
             this.pnlAzulFondo2.Name = "pnlAzulFondo2";
             this.pnlAzulFondo2.Size = new System.Drawing.Size(487, 323);
             this.pnlAzulFondo2.TabIndex = 0;
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.btnRegresar.FlatAppearance.BorderSize = 0;
+            this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(210)))), ((int)(((byte)(235)))));
+            this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresar.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Location = new System.Drawing.Point(168, 272);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(85, 28);
+            this.btnRegresar.TabIndex = 11;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // button1
             // 
@@ -281,22 +297,6 @@
             this.pctrbMinimizar5.TabStop = false;
             this.pctrbMinimizar5.Click += new System.EventHandler(this.pctrbMinimizar5_Click);
             // 
-            // btnRegresar
-            // 
-            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.btnRegresar.FlatAppearance.BorderSize = 0;
-            this.btnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(210)))), ((int)(((byte)(235)))));
-            this.btnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
-            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegresar.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(168, 272);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(85, 28);
-            this.btnRegresar.TabIndex = 11;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
             // VPDestinatario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +310,8 @@
             this.Controls.Add(this.pnlaAzul);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VPDestinatario";
+            this.Opacity = 0.98D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VPDestinatario";
             this.pnlaAzul.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctrbLogo5)).EndInit();

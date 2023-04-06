@@ -278,6 +278,8 @@
             this.Controls.Add(this.pnlVentanaP1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ventanaP";
+            this.Opacity = 0.98D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Solicitud de envio";
             this.Load += new System.EventHandler(this.ventanaP_Load);
             this.pnlVentanaP1.ResumeLayout(false);

@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using ClassLibraryBBDD;
+
 namespace WindowsFormsApp1_BEATRIXS
 {
     public partial class login : Form
     {
-        funcionesSistemas bloqueo = new funcionesSistemas();
        
+        funcionesSistemas bloqueo = new funcionesSistemas();      
         
         public login()
         {
@@ -32,8 +36,36 @@ namespace WindowsFormsApp1_BEATRIXS
         /*este evento cierra el formulario login cuando se pulsa el boton aceptar.*/
         private void btnAceptLogin_Click(object sender, EventArgs e)
         {
-         
-            this.Close(); 
+            SqlDataReader sqldatareader = null;
+            try
+            {
+               
+                sqldatareader = Class1.sqlcommand("select nombreUusuario" +
+                    " ,contraseña FROM usuario" +
+                    " where nombreUusuario='" + txtbNombre.Text + "' and contraseña='" + txtbContraseña.Text + "'",
+                    CommandType.Text).ExecuteReader();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("error de tipo: " + ex.Message, "atencion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (DataException ex)
+            {
+                MessageBox.Show("error de tipo: " + ex.Message, "atencion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error de tipo: " + ex.Message, "atencion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally {
+                sqldatareader.Close();
+                this.Close();
+                this.Dispose();
+            }
+            
         }
         //
         /*en este evento para textBox nombre cuando el usuario tenga el mouse sobre la casilla esta borrara USUARIO*/
