@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibraryBBDD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -30,12 +31,7 @@ namespace WindowsFormsApp1_BEATRIXS
         //
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            //
-            //cadena de conecion a BBDD
-            //
-            SqlConnection sqlConnection = new SqlConnection();
-            sqlConnection.ConnectionString = ConfigurationManager.ConnectionStrings["StringKey"].ConnectionString;
-            sqlConnection.Open(); 
+            
             //
             //control de regostro
             //
@@ -45,11 +41,42 @@ namespace WindowsFormsApp1_BEATRIXS
                 MessageBox.Show("completar el formulario", "mesage", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else if (txtbRegistroNombre.Text != "NOMBRE" & txtbRegistroApellido.Text != "APELLIDO" & txtbRegistroTelefono.Text != "TELEFONO" &
-                txtbRegistroEmail.Text != "E-MAIL" & txtbRegistroContraseña.Text != "CONTRASEÑA") 
-            {
+                txtbRegistroEmail.Text != "E-MAIL" & txtbRegistroContraseña.Text != "CONTRASEÑA") {
+                SqlDataReader sqldatareader = null;
+                
+                try
+                {
+                    string cadena = ("insert into usuario (nombreUusuario, apellido, telefono, email,contraseña)" +
+                        " values ('" + txtbRegistroNombre.Text + "','" + txtbRegistroApellido.Text + "',"
+                        + "'" + txtbRegistroTelefono.Text + "','" + txtbRegistroEmail.Text + "','" + txtbRegistroContraseña.Text + "')");
+                    Class1.sqlcommand(cadena,CommandType.Text).ExecuteNonQuery();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("error de tipo: " + ex.Message, "atencion sqlexcepcion",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (DataException ex)
+                {
+                    MessageBox.Show("error de tipo: " + ex.Message, "atencion dataexcepcion",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("error de tipo: " + ex.Message, "atencion excepcion",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    Class1.sqlclose();
+                    this.Close();
+                    this.Dispose();
+                }
+            }
+            
                 /*en este espacion antes del this.close  se debe agregar el codigo para agregar datos a la base de datos.*/
                 this.Close();
-            }
+            
             
         }
         //

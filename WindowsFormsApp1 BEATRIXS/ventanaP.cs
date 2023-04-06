@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibraryBBDD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,7 +29,13 @@ namespace WindowsFormsApp1_BEATRIXS
               y su correspondiente informacion almacenada en un array.*/
             //
             string[] materialesProductos = {"Cristal", "Madera", "Plastico", "Metal", "Papel" };            
-            cmbbMaterialProucto.Items.AddRange(materialesProductos);       
+            cmbbMaterialProucto.Items.AddRange(materialesProductos);
+            //
+            /*la siguientes lineas de codigos corresponden al combo box del apartado de precauciones
+              y su correspondiente informacion almacenada en un array.*/
+            //
+            string[] precauciones = { "Inflamable", "toxico" };
+            cmbbPrecauciones.Items.AddRange(precauciones);
         }
         //
         /*PRIMER evento visual para la casilla nombre.cuando el raton esta encima de la casilla 
@@ -125,8 +132,34 @@ namespace WindowsFormsApp1_BEATRIXS
         //
         private void btnVentanaPAceptar_Click(object sender, EventArgs e)
         {
-            //aqui debe ingresar el codigo para guardar la onformacion del formulario en la BBDD.
-            this.Close();
+            try
+            {
+                string cadena1 = ("insert into envioPaquete(nombreProducto,materialProducto,pesoMaterial,precaucion )"+
+                    " values('"+ txtbNombreProducto.Text+ "','"+ cmbbMaterialProucto.Text+ "','"+ txtbPesomaterial.Text+ "'"+
+                    ",'"+ cmbbPrecauciones.Text+ "')");
+                Class1.sqlcommand(cadena1, CommandType.Text).ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("error de tipo: " + ex.Message, "atencion sqlexcepcion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (DataException ex)
+            {
+                MessageBox.Show("error de tipo: " + ex.Message, "atencion dataexcepcion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error de tipo: " + ex.Message, "atencion excepcion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Class1.sqlclose();
+                this.Close();
+                this.Dispose();
+            }
         }
         //
         /*configuracion del booton cerrar del formulario ventanaP.*/
@@ -141,6 +174,32 @@ namespace WindowsFormsApp1_BEATRIXS
         private void pctrbMinimizar4_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+        //
+        /*primer evento visual para la casilla precauciones cuando el raton entre ne la casilla 
+          se vaciara.*/
+        //
+        private void cmbbPrecauciones_Enter(object sender, EventArgs e)
+        {
+              if (cmbbPrecauciones.Text == "None")
+                {
+                    cmbbPrecauciones.Text = "";
+                    cmbbPrecauciones.ForeColor = Color.Black;
+
+                }
+        }
+        //
+        /*SEGUNDO evento visual para la casilla precauciones cuando el raton salga de la casilla 
+          se vuelve a escribir el NONE*/
+        //
+        private void cmbbPrecauciones_Leave(object sender, EventArgs e)
+        {
+            if (cmbbPrecauciones.Text == "")
+            {
+                cmbbPrecauciones.Text = "None";
+                cmbbPrecauciones.ForeColor = Color.Black;
+
+            }
         }
     }
 }

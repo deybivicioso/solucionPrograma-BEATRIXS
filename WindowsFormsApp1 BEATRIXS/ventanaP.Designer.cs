@@ -31,8 +31,7 @@
             this.pnlVentanaP1 = new System.Windows.Forms.Panel();
             this.btnVentanaPAceptar = new System.Windows.Forms.Button();
             this.pnlVentanaP2 = new System.Windows.Forms.Panel();
-            this.chckbxToxico = new System.Windows.Forms.CheckBox();
-            this.chckbxInflamable = new System.Windows.Forms.CheckBox();
+            this.cmbbPrecauciones = new System.Windows.Forms.ComboBox();
             this.lbltipoMaterial = new System.Windows.Forms.Label();
             this.lblLibras = new System.Windows.Forms.Label();
             this.cmbbMaterialProucto = new System.Windows.Forms.ComboBox();
@@ -83,8 +82,7 @@
             // pnlVentanaP2
             // 
             this.pnlVentanaP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(253)))), ((int)(((byte)(235)))));
-            this.pnlVentanaP2.Controls.Add(this.chckbxToxico);
-            this.pnlVentanaP2.Controls.Add(this.chckbxInflamable);
+            this.pnlVentanaP2.Controls.Add(this.cmbbPrecauciones);
             this.pnlVentanaP2.Controls.Add(this.lbltipoMaterial);
             this.pnlVentanaP2.Controls.Add(this.lblLibras);
             this.pnlVentanaP2.Controls.Add(this.cmbbMaterialProucto);
@@ -98,27 +96,19 @@
             this.pnlVentanaP2.Size = new System.Drawing.Size(476, 318);
             this.pnlVentanaP2.TabIndex = 0;
             // 
-            // chckbxToxico
+            // cmbbPrecauciones
             // 
-            this.chckbxToxico.AutoSize = true;
-            this.chckbxToxico.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chckbxToxico.Location = new System.Drawing.Point(18, 261);
-            this.chckbxToxico.Name = "chckbxToxico";
-            this.chckbxToxico.Size = new System.Drawing.Size(70, 22);
-            this.chckbxToxico.TabIndex = 12;
-            this.chckbxToxico.Text = "Toxico";
-            this.chckbxToxico.UseVisualStyleBackColor = true;
-            // 
-            // chckbxInflamable
-            // 
-            this.chckbxInflamable.AutoSize = true;
-            this.chckbxInflamable.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chckbxInflamable.Location = new System.Drawing.Point(18, 231);
-            this.chckbxInflamable.Name = "chckbxInflamable";
-            this.chckbxInflamable.Size = new System.Drawing.Size(99, 22);
-            this.chckbxInflamable.TabIndex = 11;
-            this.chckbxInflamable.Text = "Inflamable";
-            this.chckbxInflamable.UseVisualStyleBackColor = true;
+            this.cmbbPrecauciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.cmbbPrecauciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbbPrecauciones.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbbPrecauciones.FormattingEnabled = true;
+            this.cmbbPrecauciones.Location = new System.Drawing.Point(15, 232);
+            this.cmbbPrecauciones.Name = "cmbbPrecauciones";
+            this.cmbbPrecauciones.Size = new System.Drawing.Size(197, 24);
+            this.cmbbPrecauciones.TabIndex = 11;
+            this.cmbbPrecauciones.Text = "None";
+            this.cmbbPrecauciones.Enter += new System.EventHandler(this.cmbbPrecauciones_Enter);
+            this.cmbbPrecauciones.Leave += new System.EventHandler(this.cmbbPrecauciones_Leave);
             // 
             // lbltipoMaterial
             // 
@@ -306,13 +296,12 @@
         private System.Windows.Forms.ComboBox cmbbMaterialProucto;
         private System.Windows.Forms.Label lblLibras;
         private System.Windows.Forms.Label lbltipoMaterial;
-        private System.Windows.Forms.CheckBox chckbxToxico;
-        private System.Windows.Forms.CheckBox chckbxInflamable;
         private System.Windows.Forms.Button btnVentanaPAceptar;
         private System.Windows.Forms.Label lblVentanaPTitulo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pctrbLogo4;
         private System.Windows.Forms.PictureBox pctrbCerrar4;
         private System.Windows.Forms.PictureBox pctrbMinimizar4;
+        private System.Windows.Forms.ComboBox cmbbPrecauciones;
     }
 }

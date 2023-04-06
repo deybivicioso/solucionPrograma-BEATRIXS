@@ -1,7 +1,9 @@
-﻿using System;
+﻿using ClassLibraryBBDD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -172,8 +174,35 @@ namespace WindowsFormsApp1_BEATRIXS
          // 
         private void button1_Click(object sender, EventArgs e)
         {
-            //en esta linea ingrese la instruccion para guardar los datos en la base de datos.
-            
+            try
+            {
+                string cadena2 = ("insert into destinatario (direccion,codigoPostal,telefono,email)"+
+                    " values ('"+ txtbxDestinatario.Text+ "','"+ txtbxDireccion.Text+ "',"+
+                    "'"+ txtbxCodigo .Text+ "','"+ txtbxTelefono.Text+ "','"+ txtbEmail.Text+ "')");
+                Class1.sqlcommand(cadena2, CommandType.Text).ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("error de tipo: " + ex.Message, "atencion sqlexcepcion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (DataException ex)
+            {
+                MessageBox.Show("error de tipo: " + ex.Message, "atencion dataexcepcion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error de tipo: " + ex.Message, "atencion excepcion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Class1.sqlclose();
+                this.Close();
+                this.Dispose();
+            }
+
         }
         //
         /*con este evento retornaremos al formulario ventanaP.*/

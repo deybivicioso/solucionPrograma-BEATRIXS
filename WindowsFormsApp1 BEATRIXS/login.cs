@@ -16,7 +16,7 @@ namespace WindowsFormsApp1_BEATRIXS
 {
     public partial class login : Form
     {
-       
+        
         funcionesSistemas bloqueo = new funcionesSistemas();      
         
         public login()
@@ -40,24 +40,24 @@ namespace WindowsFormsApp1_BEATRIXS
             try
             {
                
-                sqldatareader = Class1.sqlcommand("select nombreUusuario" +
+                sqldatareader = ClassLibraryBBDD.Class1.sqlcommand("select nombreUusuario" +
                     " ,contraseña FROM usuario" +
                     " where nombreUusuario='" + txtbNombre.Text + "' and contraseña='" + txtbContraseña.Text + "'",
                     CommandType.Text).ExecuteReader();
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("error de tipo: " + ex.Message, "atencion",
+                MessageBox.Show("error de tipo: " + ex.Message, "atencion sqlexcepcion",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (DataException ex)
             {
-                MessageBox.Show("error de tipo: " + ex.Message, "atencion",
+                MessageBox.Show("error de tipo: " + ex.Message, "atencion dataexcepcion",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error de tipo: " + ex.Message, "atencion",
+                MessageBox.Show("error de tipo: " + ex.Message, "atencion excepcion",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally {
