@@ -1,4 +1,4 @@
-﻿using ClassLibraryBBDD;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,14 +42,14 @@ namespace WindowsFormsApp1_BEATRIXS
             }
             else if (txtbRegistroNombre.Text != "NOMBRE" & txtbRegistroApellido.Text != "APELLIDO" & txtbRegistroTelefono.Text != "TELEFONO" &
                 txtbRegistroEmail.Text != "E-MAIL" & txtbRegistroContraseña.Text != "CONTRASEÑA") {
-                SqlDataReader sqldatareader = null;
                 
+
                 try
                 {
                     string cadena = ("insert into usuario (nombreUusuario, apellido, telefono, email,contraseña)" +
                         " values ('" + txtbRegistroNombre.Text + "','" + txtbRegistroApellido.Text + "',"
                         + "'" + txtbRegistroTelefono.Text + "','" + txtbRegistroEmail.Text + "','" + txtbRegistroContraseña.Text + "')");
-                    Class1.sqlcommand(cadena,CommandType.Text).ExecuteNonQuery();
+                    libreriaBBDD.BBDD.command(cadena, CommandType.Text).ExecuteNonQuery();
                 }
                 catch (SqlException ex)
                 {
@@ -68,14 +68,13 @@ namespace WindowsFormsApp1_BEATRIXS
                 }
                 finally
                 {
-                    Class1.sqlclose();
+                    libreriaBBDD.BBDD.close();
                     this.Close();
                     this.Dispose();
                 }
             }
             
-                /*en este espacion antes del this.close  se debe agregar el codigo para agregar datos a la base de datos.*/
-                this.Close();
+                
             
             
         }

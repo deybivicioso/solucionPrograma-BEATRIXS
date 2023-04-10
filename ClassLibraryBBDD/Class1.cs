@@ -13,7 +13,7 @@ namespace ClassLibraryBBDD
 {
     public static class Class1
     {
-        public static string connetionstrings = ConfigurationManager.ConnectionStrings["StringKey"].ConnectionString;
+        public static string connetionstrings = ConfigurationManager.ConnectionStrings["StringKey"].ConnectionString;      
 
 
         public static SqlConnection sqlconnection()

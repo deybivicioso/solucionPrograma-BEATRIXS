@@ -1,4 +1,4 @@
-﻿using ClassLibraryBBDD;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace WindowsFormsApp1_BEATRIXS
 {
@@ -176,10 +177,10 @@ namespace WindowsFormsApp1_BEATRIXS
         {
             try
             {
-                string cadena2 = ("insert into destinatario (direccion,codigoPostal,telefono,email)"+
-                    " values ('"+ txtbxDestinatario.Text+ "','"+ txtbxDireccion.Text+ "',"+
-                    "'"+ txtbxCodigo .Text+ "','"+ txtbxTelefono.Text+ "','"+ txtbEmail.Text+ "')");
-                Class1.sqlcommand(cadena2, CommandType.Text).ExecuteNonQuery();
+                string cadena2 = ("insert into destinatario (direccion,codigoPostal,telefono,email)" +
+                    " values ('" + txtbxDestinatario.Text + "','" + txtbxDireccion.Text + "'," +
+                    "'" + txtbxCodigo.Text + "','" + txtbxTelefono.Text + "','" + txtbEmail.Text + "')");
+                libreriaBBDD.BBDD.command(cadena2, CommandType.Text).ExecuteNonQuery();
             }
             catch (SqlException ex)
             {
@@ -198,10 +199,11 @@ namespace WindowsFormsApp1_BEATRIXS
             }
             finally
             {
-                Class1.sqlclose();
+                libreriaBBDD.BBDD.close();
                 this.Close();
                 this.Dispose();
             }
+
 
         }
         //

@@ -40,6 +40,9 @@
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\libreriaUI VisualStudio\Guna.UI.dll</HintPath>
     </Reference>
+    <Reference Include="libreriaBBDD">
+      <HintPath>..\libreriaBBDD\bin\Debug\libreriaBBDD.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -131,12 +134,6 @@
     <Content Include="image\closse.png" />
     <Content Include="image\logoPrincipal.png" />
     <Content Include="image\minuss.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibraryBBDD\ClassLibraryBBDD.csproj">
-      <Project>{2d216b72-2ae2-4ff2-93b1-023108bfee1f}</Project>
-      <Name>ClassLibraryBBDD</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

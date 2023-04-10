@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using ClassLibraryBBDD;
+
 
 namespace WindowsFormsApp1_BEATRIXS
 {
@@ -36,11 +36,11 @@ namespace WindowsFormsApp1_BEATRIXS
         /*este evento cierra el formulario login cuando se pulsa el boton aceptar.*/
         private void btnAceptLogin_Click(object sender, EventArgs e)
         {
-            SqlDataReader sqldatareader = null;
+            
             try
             {
-               
-                sqldatareader = ClassLibraryBBDD.Class1.sqlcommand("select nombreUusuario" +
+
+                 libreriaBBDD.BBDD.command("select nombreUusuario" +
                     " ,contraseña FROM usuario" +
                     " where nombreUusuario='" + txtbNombre.Text + "' and contraseña='" + txtbContraseña.Text + "'",
                     CommandType.Text).ExecuteReader();
@@ -60,12 +60,14 @@ namespace WindowsFormsApp1_BEATRIXS
                 MessageBox.Show("error de tipo: " + ex.Message, "atencion excepcion",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally {
-                sqldatareader.Close();
+            finally
+            {
+                libreriaBBDD.BBDD.close();
                 this.Close();
                 this.Dispose();
             }
-            
+
+
         }
         //
         /*en este evento para textBox nombre cuando el usuario tenga el mouse sobre la casilla esta borrara USUARIO*/
