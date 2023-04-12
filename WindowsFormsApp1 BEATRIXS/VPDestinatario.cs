@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -15,6 +16,8 @@ namespace WindowsFormsApp1_BEATRIXS
 {
     public partial class VPDestinatario : Form
     {
+        static string connection3;
+        SqlConnection sqlconnection3 = new SqlConnection(connection3);
         funcionesSistemas bloqueo1=new funcionesSistemas();
         public VPDestinatario()
         {
@@ -203,6 +206,7 @@ namespace WindowsFormsApp1_BEATRIXS
                 this.Close();
                 this.Dispose();
             }
+
 
 
         }

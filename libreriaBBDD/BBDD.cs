@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace libreriaBBDD
 {
-    public class BBDD
+    public static class BBDD
     {
        public static string connetionstrings = ConfigurationManager.ConnectionStrings["StringKey"].ConnectionString;
 

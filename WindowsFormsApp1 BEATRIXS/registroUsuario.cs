@@ -16,7 +16,10 @@ namespace WindowsFormsApp1_BEATRIXS
    
     public partial class registroUsuario : Form
     {
-       
+        static string sqlconnection;
+        SqlConnection sqlconnection1 = new SqlConnection(sqlconnection);
+
+
         funcionesSistemas bloque2 = new funcionesSistemas();       
        
         
@@ -42,7 +45,7 @@ namespace WindowsFormsApp1_BEATRIXS
             }
             else if (txtbRegistroNombre.Text != "NOMBRE" & txtbRegistroApellido.Text != "APELLIDO" & txtbRegistroTelefono.Text != "TELEFONO" &
                 txtbRegistroEmail.Text != "E-MAIL" & txtbRegistroContraseña.Text != "CONTRASEÑA") {
-                
+
 
                 try
                 {

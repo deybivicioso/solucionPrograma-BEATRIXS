@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -15,7 +16,9 @@ namespace WindowsFormsApp1_BEATRIXS
 {
     public partial class ventanaP : Form
     {
-       funcionesSistemas bloqueo1=new funcionesSistemas();
+        static string connetionString2;
+        SqlConnection sqlconnection2=new SqlConnection(connetionString2);
+        funcionesSistemas bloqueo1=new funcionesSistemas();
        
         public ventanaP()
         {

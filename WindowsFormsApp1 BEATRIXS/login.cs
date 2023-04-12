@@ -1,4 +1,5 @@
-﻿using System;
+﻿using libreriaBBDD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -16,7 +17,9 @@ namespace WindowsFormsApp1_BEATRIXS
 {
     public partial class login : Form
     {
-        
+        SqlConnection sqlconnetion;
+
+
         funcionesSistemas bloqueo = new funcionesSistemas();      
         
         public login()
@@ -36,14 +39,14 @@ namespace WindowsFormsApp1_BEATRIXS
         /*este evento cierra el formulario login cuando se pulsa el boton aceptar.*/
         private void btnAceptLogin_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
 
-                 libreriaBBDD.BBDD.command("select nombreUusuario" +
-                    " ,contraseña FROM usuario" +
-                    " where nombreUusuario='" + txtbNombre.Text + "' and contraseña='" + txtbContraseña.Text + "'",
-                    CommandType.Text).ExecuteReader();
+                libreriaBBDD.BBDD.command("select nombreUusuario" +
+                   " ,contraseña FROM usuario" +
+                   " where nombreUusuario='" + txtbNombre.Text + "' and contraseña='" + txtbContraseña.Text + "'",
+                   CommandType.Text).ExecuteReader();
             }
             catch (SqlException ex)
             {
