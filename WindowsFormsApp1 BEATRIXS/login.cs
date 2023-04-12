@@ -17,7 +17,7 @@ namespace WindowsFormsApp1_BEATRIXS
 {
     public partial class login : Form
     {
-        SqlConnection sqlconnetion;
+       
 
 
         funcionesSistemas bloqueo = new funcionesSistemas();      

@@ -16,8 +16,7 @@ namespace WindowsFormsApp1_BEATRIXS
    
     public partial class registroUsuario : Form
     {
-        static string sqlconnection;
-        SqlConnection sqlconnection1 = new SqlConnection(sqlconnection);
+        
 
 
         funcionesSistemas bloque2 = new funcionesSistemas();       

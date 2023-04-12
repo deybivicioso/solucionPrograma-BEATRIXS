@@ -16,8 +16,7 @@ namespace WindowsFormsApp1_BEATRIXS
 {
     public partial class VPDestinatario : Form
     {
-        static string connection3;
-        SqlConnection sqlconnection3 = new SqlConnection(connection3);
+      
         funcionesSistemas bloqueo1=new funcionesSistemas();
         public VPDestinatario()
         {
